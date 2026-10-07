@@ -6,6 +6,11 @@ freeman
 https://apollo.rip/user.php?id=4614
 Dec. 12, 2016
 
+derek
+https://orpheus.network/user.php?id=38665
+https://redacted.sh/user.php?id=26414
+Oct. 7, 2026
+
 Original Author:
 Author:  Callum Jefferies (callumj)
 Contact: callum.jefferies@gmail.com
@@ -1809,4 +1814,17 @@ h1.site_name {
       the same spot it occupies on Redacted. */
 #content > #alerts {
     top: 24px;
+}
+
+/* 5. Clipped buttons (e.g. "Unfriend" on Friends, "Purchase" on Bonus).
+      The "form input { max-width: 80% }" rule near the top is meant to keep
+      text fields from overflowing, but it also applies to buttons. When a
+      button sits alone in a narrow table cell, the cell shrinks to fit the
+      button and the button is then capped at 80% of that, cutting off the
+      label. Buttons should always be as wide as their text. */
+form input[type="submit"],
+form input[type="button"],
+form input[type="reset"],
+form button {
+    max-width: none;
 }

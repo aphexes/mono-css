@@ -6,7 +6,7 @@ freeman
 https://apollo.rip/user.php?id=4614
 Dec. 12, 2016
 
-derek
+ginseng
 https://orpheus.network/user.php?id=38665
 https://redacted.sh/user.php?id=26414
 Oct. 7, 2026
@@ -1747,14 +1747,13 @@ select:focus, select:active {
 
 
 /* ==========================================================================
-   Orpheus compatibility
-   Orpheus runs a newer Gazelle whose header markup differs from Redacted's.
-   Everything below is written so Redacted keeps rendering the way it did.
+   OPS compatibility -- header markup differs from RED's.
+   Everything below is written so RED keeps rendering the way it did.
    ========================================================================== */
 
 /* 1. Site name.
-      Redacted: <h1 class="hidden">   Orpheus: <h1 class="site_name">
-      Orpheus hides .site_name by default, so the header sat ~50px too high
+      RED: <h1 class="hidden">   OPS: <h1 class="site_name">
+      OPS hides .site_name by default, so the header sat ~50px too high
       and the username / settings / logout row ended up above the top of the
       page. Styling it the same as h1.hidden restores the title and pushes the
       header back down to where the rest of this stylesheet expects it. */
@@ -1772,14 +1771,13 @@ h1.site_name {
     top: -4px;
 }
 
-/* 2. Orpheus has an extra (empty) user-class item between the username and
+/* 2. OPS has an extra (empty) user-class item between the username and
       the settings button, which adds a stray gap. */
 #userinfo_username #nav_userclass {
     display: none;
 }
 
-/* 3. Search bars.
-      Orpheus has one more search box (Collages) than Redacted, so the fixed
+/* 3. Search bar fix (OPS has one more search box than Redacted, so the fixed
       116px inputs overflowed the bar and "Users" slid under the stats box.
       Let the boxes share the bar's width evenly instead, however many there
       are. */
@@ -1809,7 +1807,7 @@ h1.site_name {
 }
 
 /* 4. Alerts (new messages, news, etc.).
-      Redacted keeps #alerts inside #header; Orpheus moved it into #content,
+      RED keeps #alerts inside #header; OPS moved it into #content,
       where the old "top: -100px" put it above the top of the page. Pin it to
       the same spot it occupies on Redacted. */
 #content > #alerts {
